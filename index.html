@@ -112,9 +112,15 @@
           width: '560',
           videoId: '2QkLK7EG1Hw',
           events: {
-            onReady: initialize
+            onReady: initialize,
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
           }
         });
+      }
+      //Play the video at the start.
+      function onPlayerReady(event) {
+        event.target.playVideo();
       }
 
       // Initialize function: update values every second (1000ms)
@@ -143,20 +149,27 @@
       //1. onClick for #intro --> 0 seconds (the start.)
       $('#intro').on('click', function() {
 
-    // Calculate the new time for the video.
-    // new time in seconds = total duration in seconds * ( value of range input / 100 )
+      // Start the video over.
+      player.seekTo(0, true);
 
-    // Skip video to new time.
-    player.seekTo(0, true);
-    initialize();
-    // player.playVideo();
+      });
 
-    });
-
-      //2. onClick for #chapter1 --> 206000 milliseconds
+      //2. onClick for #chapter1 --> 126 seconds
 
       $('#chapter1').on('click', function() {
-        player.seekTo(216, true);
+        player.seekTo(126, true);
+         // player.playVideo();
+      });
+
+      //3. onClick for #chapter2 --> 331 seconds
+      $('#chapter2').on('click', function() {
+        player.seekTo(331, true);
+         // player.playVideo();
+      });
+
+      //4. onClick for #chapter3 --> 756 seconds
+      $('#chapter2').on('click', function() {
+        player.seekTo(756, true);
          // player.playVideo();
       });
 
