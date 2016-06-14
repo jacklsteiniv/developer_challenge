@@ -76,7 +76,7 @@
   <!-- The page tabs (UI-routing) will go below the video. -->
   <div id = "chapter-tabs">
     <ul class="nav navbar-nav">
-                <li><a id = "intro" ui-sref="intro">Introduction</a></li>
+                <li><a id = "introduction" ui-sref="intro">Introduction</a></li>
                 <li><a id = "chapter1" ui-sref="chapter1">MyStory</a></li>
                 <li><a id = "chapter2" ui-sref="chapter2">Discovering Passion</a></li>
                 <li><a id = "chapter3" ui-sref="chapter3">Roadblocks</a></li>
@@ -146,14 +146,14 @@
       //player.seekTo(sec) functions for each ui route tag.
 
       //1. onClick for #intro --> 0 seconds (the start.)
-      $('#intro').on('click', function() {
+      $('#introduction').on('click', function() {
         console.log("intro!")
       // Start the video over.
       //
 
       var duration = player.getDuration();
       player.seekTo(duration-duration, false); // equals to video exact start time which should be the same as 0
-      player.playVideo();
+      player.seekTo(0, true);
 
       });
 
