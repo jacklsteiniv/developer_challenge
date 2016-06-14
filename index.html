@@ -76,10 +76,10 @@
   <!-- The page tabs (UI-routing) will go below the video. -->
   <div id = "chapter-tabs">
     <ul class="nav navbar-nav">
-                <li><a ui-sref="intro">Introduction</a></li>
-                <li><a ui-sref="chapter1">MyStory</a></li>
-                <li><a ui-sref="chapter2">Discovering Passion</a></li>
-                <li><a ui-sref="chapter3">Roadblocks</a></li>
+                <li><a id = "intro" ui-sref="intro">Introduction</a></li>
+                <li><a id = "chapter1" ui-sref="chapter1">MyStory</a></li>
+                <li><a id = "chapter2" ui-sref="chapter2">Discovering Passion</a></li>
+                <li><a id = "chapter3" ui-sref="chapter3">Roadblocks</a></li>
     </ul>
   </div>
   <br><br><br><br>
@@ -134,6 +134,26 @@
             updateProgressBar();
         }, 1000)
 
+      }
+
+      //player.seekTo(sec) functions for each ui route tag.
+
+      //1. onClick for #intro --> 0 seconds (the start.)
+      $('#progress-bar').on('click', function (e) {
+
+    // Calculate the new time for the video.
+    // new time in seconds = total duration in seconds * ( value of range input / 100 )
+    var newTime = 0;
+
+    // Skip video to new time.
+    player.seekTo(newTime);
+
+    });
+
+      //2. onClick for #chapter1 --> 206000 milliseconds
+
+      $('#chapter1').on('click', function(e) {
+        playerSeekTo(216000);
       }
 
     </script>
