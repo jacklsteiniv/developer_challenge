@@ -141,13 +141,14 @@
       //player.seekTo(sec) functions for each ui route tag.
 
       //1. onClick for #intro --> 0 seconds (the start.)
-      $('#intro').on('click', function () {
+      $('#intro').on('click', function() {
 
     // Calculate the new time for the video.
     // new time in seconds = total duration in seconds * ( value of range input / 100 )
 
     // Skip video to new time.
     player.seekTo(0);
+    initialize();
     // player.playVideo();
 
     });
@@ -155,7 +156,7 @@
       //2. onClick for #chapter1 --> 206000 milliseconds
 
       $('#chapter1').on('click', function() {
-        player.seekTo(216000);
+        player.seekTo(216);
          // player.playVideo();
       });
 
