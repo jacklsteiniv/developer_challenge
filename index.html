@@ -147,7 +147,7 @@
     // new time in seconds = total duration in seconds * ( value of range input / 100 )
 
     // Skip video to new time.
-    player.seekTo(0);
+    player.seekTo(0, true);
     initialize();
     // player.playVideo();
 
@@ -156,7 +156,7 @@
       //2. onClick for #chapter1 --> 206000 milliseconds
 
       $('#chapter1').on('click', function() {
-        player.seekTo(216);
+        player.seekTo(216, true);
          // player.playVideo();
       });
 
