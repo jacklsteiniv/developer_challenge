@@ -147,8 +147,9 @@
 
       //1. onClick for #intro --> 0 seconds (the start.)
       $('#intro').on('click', function() {
-
+        console.log("intro!")
       // Start the video over.
+      //
 
       var duration = player.getDuration();
       player.seekTo(duration-duration, false); // equals to video exact start time which should be the same as 0

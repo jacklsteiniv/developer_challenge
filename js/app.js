@@ -8,7 +8,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 
   //set up states - urls and templates
   .state('intro', {
-    url: '/',
+    url: '/intro',
     templateUrl: 'intro.html'
 
   })
@@ -31,6 +31,6 @@ function MainRouter($stateProvider, $urlRouterProvider) {
     templateUrl: 'chapter3.html'
   })
 
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/intro');
 
 }
