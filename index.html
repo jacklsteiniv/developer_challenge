@@ -151,7 +151,8 @@
       // Start the video over.
 
       var duration = player.getDuration();
-      player.seekTo(0, true)
+      player.seekTo(duration-duration, false); // equals to video exact start time which should be the same as 0
+      player.playVideo();
 
       });
 
