@@ -149,7 +149,9 @@
       $('#intro').on('click', function() {
 
       // Start the video over.
-      player.seekTo(0, true);
+
+      var duration = player.getDuration();
+      player.seekTo(duration-duration, true)
 
       });
 
@@ -167,7 +169,7 @@
       });
 
       //4. onClick for #chapter3 --> 756 seconds
-      $('#chapter2').on('click', function() {
+      $('#chapter3').on('click', function() {
         player.seekTo(756, true);
          // player.playVideo();
       });
