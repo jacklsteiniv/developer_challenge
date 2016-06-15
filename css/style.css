@@ -7,6 +7,11 @@
   background: black;
 }
 
+.col-md-6 {
+  float: none;
+  margin: 0 auto;
+}
+
 #top li a {
   color: white;
 }
