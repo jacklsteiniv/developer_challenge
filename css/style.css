@@ -16,12 +16,11 @@
 
 #top li a {
   color: white;
-  padding-right: 5%;
-  padding-left: 5%;
 }
 
 #chapter-tabs a {
-  color: green;
+  color: black;
+  text-shadow: 1px white;
 }
 
 #intro-header {
