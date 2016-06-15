@@ -1,8 +1,8 @@
-var ElmApp = angular.module('ElmApp', ['ui.router', 'ngAnimate'])
-// .config(MainRouter)
+angular
+.module('ElmApp', ['ui.router', 'ngAnimate'])
+.config(MainRouter, $stateProvider)
 
-ElmApp.config(functon($stateProvider, $urlRouterProvider) {
-// function MainRouter($stateProvider, $urlRouterProvider) {
+function MainRouter($stateProvider, $urlRouterProvider) {
 
   $stateProvider
 
@@ -33,4 +33,4 @@ ElmApp.config(functon($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise('/intro');
 
-});
+}
