@@ -21,7 +21,7 @@ input[type="checkbox"].checkbox:checked + label {
 }
 
 /*ng-animate*/
-main {
+.tab-content{
     /* start 'enter' transition */
     &.ng-enter {
         /* transition on enter for .5s */
