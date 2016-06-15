@@ -150,10 +150,11 @@
         console.log("intro!")
       // Start the video over.
       //
-
+      window.location.reload();
       var duration = player.getDuration();
       player.seekTo(duration-duration, false); // equals to video exact start time which should be the same as 0
       player.seekTo(0, true);
+
 
       });
 
@@ -175,6 +176,23 @@
         player.seekTo(756, true);
          // player.playVideo();
       });
+
+
+      // .getCurrentTime() --> state changes
+
+    //if(0), go to intro.
+    if(player.getCurrentTime() == 0) {
+      $state.go('intro');
+    }
+    if(player.getCurrentTime() == 126) {
+      $state.go('chapter1');
+    }
+    if(player.getCurrentTime() == 331) {
+      $state.go('chapter2');
+    }
+    if(player.getCurrentTime() == 756) {
+      $state.go('chapter3');
+    }
 
     </script>
 <!-- Running the Sidr script 06.09.16 -->
