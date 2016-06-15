@@ -141,6 +141,22 @@
 
         player.playVideo();
 
+        // .getCurrentTime() --> state changes
+
+        //if(0), go to intro.
+        if(player.getCurrentTime() == 0) {
+          $state.go('intro');
+        }
+        if(player.getCurrentTime() == 126) {
+          $state.go('chapter1');
+        }
+        if(player.getCurrentTime() == 331) {
+          $state.go('chapter2');
+        }
+        if(player.getCurrentTime() == 756) {
+          $state.go('chapter3');
+        }
+
       }
 
       //player.seekTo(sec) functions for each ui route tag.
@@ -178,21 +194,7 @@
       });
 
 
-      // .getCurrentTime() --> state changes
 
-    //if(0), go to intro.
-    if(player.getCurrentTime() == 0) {
-      $state.go('intro');
-    }
-    if(player.getCurrentTime() == 126) {
-      $state.go('chapter1');
-    }
-    if(player.getCurrentTime() == 331) {
-      $state.go('chapter2');
-    }
-    if(player.getCurrentTime() == 756) {
-      $state.go('chapter3');
-    }
 
     </script>
 <!-- Running the Sidr script 06.09.16 -->
