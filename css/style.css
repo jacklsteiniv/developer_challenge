@@ -7,7 +7,7 @@
   background: black;
 }
 
-.col-md-6 {
+#player-holder {
   float: none;
   margin: 0 auto;
 }
@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-input[type="checkbox"].checkbox:checked + label {
+input[type="checkbox"].green:checked + label {
     color: green;
 }
 
