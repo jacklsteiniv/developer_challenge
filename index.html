@@ -141,10 +141,13 @@
 
         player.playVideo();
 
-        // .getCurrentTime() --> state changes
+      }
+
+      // .getCurrentTime() --> state changes
 
         //if(0), go to intro.
         if(player.getCurrentTime() < 126) {
+          console.log(player.getCurrentTime())
           console.log("intro state");
           $state.go('intro');
         }
@@ -160,8 +163,6 @@
           console.log("chapter 3 state")
           $state.go('chapter3');
         }
-
-      }
 
       //player.seekTo(sec) functions for each ui route tag.
 
