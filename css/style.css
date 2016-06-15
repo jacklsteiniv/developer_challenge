@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-input[type="checkbox"].green:checked + label {
+input[type="checkbox"]:checked+label {
     color: green;
 }
 
