@@ -1,36 +1,23 @@
 <div class="tab-content">
 <style>
-.ng-hide {
-  height: 0;
-  width: 0;
-  background-color: transparent;
-  top:-200px;
-  left: 200px;
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
 }
 </style>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
 <h3>TOOLS</h3>
-<body ng-app="ngAnimate">
-  <div class="checkbox">
-    <label><input class="green" type="checkbox" ng-model="myCheck" value="">What are two things in your life that have shaped who you are today?</label>
-    <div ng-hide="myCheck"></div>
+  <div class="checkbox checkbox-success">
+    <input class="green" type="checkbox" value=""><label class = "strikethrough">What are two things in your life that have shaped who you are today?</label>
   </div>
-  <div class="checkbox">
-    <label><input class="green" type="checkbox" ng-model="myCheck" value="">What makes you really upset?</label>
-    <div ng-hide="myCheck"></div>
+  <div class="checkbox checkbox-success">
+    <input class="green" type="checkbox" value=""><label class="strikethrough">What makes you really upset?</label>
+      </div>
+  <div class="checkbox checkbox-success">
+    <input class="green" type="checkbox" value=""><label class="strikethrough">Write down three people who are where you want to be.</label>
   </div>
-  <div class="checkbox">
-    <label><input class="green" type="checkbox" ng-model="myCheck" value="">Write down three people who are where you want to be.</label>
-    <div ng-hide="myCheck"></div>
+  <div class="checkbox checkbox-success">
+    <input class="green" type="checkbox" value=""><label class="strikethrough">Write down one thing that you admire about those three people.</label>
   </div>
-  <div class="checkbox">
-    <label><input class="green" type="checkbox" ng-model="myCheck" value="">Write down one thing that you admire about those three people.</label>
-    <div ng-hide="myCheck"></div>
-  </div>
-  <div class="checkbox">
-    <label><input class="green" type="checkbox" ng-model="myCheck" value="">Go back through questions and evaluate answers.</label>
-    <div ng-hide="myCheck"></div>
+  <div class="checkbox checkbox-success">
+    <input class="green" type="checkbox" value=""><label class="strikethrough">Go back through questions and evaluate answers.</label>
   </div>
 </div>
-</body>
