@@ -139,7 +139,7 @@
             updateProgressBar();
         }, 1000)
 
-        //player.playVideo();
+        player.playVideo();
 
       }
       console.log("Player is " + player)
@@ -147,23 +147,23 @@
       // .getCurrentTime() --> state changes
 
         //if(0), go to intro.
-        if(player.getDuration() < 126) {
-          console.log(player.getCurrentTime())
-          console.log("intro state");
-          $state.go('intro');
-        }
-        else if(player.getCurrentTime() >= 126) {
-          console.log("chapter 1 state")
-          $state.go('chapter1');
-        }
-        else if(player.getCurrentTime() >= 331) {
-          console.log("chapter 2 state")
-          $state.go('chapter2');
-        }
-        else if(player.getCurrentTime() >= 756) {
-          console.log("chapter 3 state")
-          $state.go('chapter3');
-        }
+        // if(player.getDuration() < 126) {
+        //   console.log(player.getCurrentTime())
+        //   console.log("intro state");
+        //   $state.go('intro');
+        // }
+        // else if(player.getCurrentTime() >= 126) {
+        //   console.log("chapter 1 state")
+        //   $state.go('chapter1');
+        // }
+        // else if(player.getCurrentTime() >= 331) {
+        //   console.log("chapter 2 state")
+        //   $state.go('chapter2');
+        // }
+        // else if(player.getCurrentTime() >= 756) {
+        //   console.log("chapter 3 state")
+        //   $state.go('chapter3');
+        // }
 
       //player.seekTo(sec) functions for each ui route tag.
 
