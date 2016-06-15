@@ -21,6 +21,15 @@
   text-align: center;
 }
 
+#player-holder {
+  width:820px;
+}
+
+#player {
+  margin-left: 130px;
+  margin-right:130px;
+}
+
 input[type="checkbox"]:checked+label {
     color: green;
 }
