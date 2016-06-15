@@ -82,7 +82,7 @@
                 <li><a id = "chapter3" ui-sref="chapter3">CHAPTER 3 | ROADBLOCKS</a></li>
     </ul>
   </div>
-  <br><br><br><br>
+  <br>
 
 <!-- Inject UI routing here for the chapter views.. -->
   <ui-view autoscroll="false" ng-cloak>
@@ -144,6 +144,7 @@
       }
       console.log("Player is " + player)
 
+
       // .getCurrentTime() --> state changes
 
         //if(0), go to intro.
@@ -152,18 +153,18 @@
         //   console.log("intro state");
         //   $state.go('intro');
         // }
-        // else if(player.getCurrentTime() >= 126) {
-        //   console.log("chapter 1 state")
-        //   $state.go('chapter1');
-        // }
-        // else if(player.getCurrentTime() >= 331) {
-        //   console.log("chapter 2 state")
-        //   $state.go('chapter2');
-        // }
-        // else if(player.getCurrentTime() >= 756) {
-        //   console.log("chapter 3 state")
-        //   $state.go('chapter3');
-        // }
+        if(player.getCurrentTime() >= 126) {
+          console.log("chapter 1 state")
+          $state.go('chapter1');
+        }
+        else if(player.getCurrentTime() >= 331) {
+          console.log("chapter 2 state")
+          $state.go('chapter2');
+        }
+        else if(player.getCurrentTime() >= 756) {
+          console.log("chapter 3 state")
+          $state.go('chapter3');
+        }
 
       //player.seekTo(sec) functions for each ui route tag.
 
