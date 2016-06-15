@@ -76,10 +76,10 @@
   <!-- The page tabs (UI-routing) will go below the video. -->
   <div id = "chapter-tabs">
     <ul class="nav navbar-nav">
-                <li><a id = "introduction" ui-sref="intro">Introduction</a></li>
-                <li><a id = "chapter1" ui-sref="chapter1">MyStory</a></li>
-                <li><a id = "chapter2" ui-sref="chapter2">Discovering Passion</a></li>
-                <li><a id = "chapter3" ui-sref="chapter3">Roadblocks</a></li>
+                <li><a id = "introduction" ui-sref="intro">INTRODUCTION</a></li>
+                <li><a id = "chapter1" ui-sref="chapter1">CHAPTER 1 | MYSTORY</a></li>
+                <li><a id = "chapter2" ui-sref="chapter2">CHAPTER 2 | DISCOVERING PASSION</a></li>
+                <li><a id = "chapter3" ui-sref="chapter3">CHAPTER 3 | ROADBLOCKS</a></li>
     </ul>
   </div>
   <br><br><br><br>
@@ -139,14 +139,15 @@
             updateProgressBar();
         }, 1000)
 
-        player.playVideo();
+        //player.playVideo();
 
       }
+      console.log("Player is " + player)
 
       // .getCurrentTime() --> state changes
 
         //if(0), go to intro.
-        if(player.getCurrentTime() < 126) {
+        if(player.getDuration() < 126) {
           console.log(player.getCurrentTime())
           console.log("intro state");
           $state.go('intro');
