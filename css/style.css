@@ -5,6 +5,8 @@
 
 #top {
   background: black;
+  padding-left:20%;
+  padding-right:20%;
 }
 
 #player-holder {
@@ -14,8 +16,13 @@
 
 #top li a {
   color: white;
+  padding-right: 5%;
+  padding-left: 5%;
 }
 
+#chapter-tabs a {
+  color: green;
+}
 
 #intro-header {
   text-align: center;
@@ -34,20 +41,3 @@ input[type="checkbox"]:checked+label {
     color: green;
 }
 
-/*ng-animate*/
-.tab-content{
-    /* start 'enter' transition */
-    &.ng-enter {
-        /* transition on enter for .5s */
-        transition: .5s;
-
-        /* start with opacity 0 (invisible) */
-        opacity: 0;
-    }
-
-    /* end 'enter' transition */
-    &.ng-enter-active {
-        /* end with opacity 1 (fade in) */
-        opacity: 1;
-    }
-}
