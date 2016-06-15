@@ -1,5 +1,4 @@
-angular
-.module('ElmApp', ['ui.router', 'ngAnimate'])
+var ElmApp = angular.module('ElmApp', ['ui.router', 'ngAnimate'])
 // .config(MainRouter)
 
 ElmApp.config(functon($stateProvider, $urlRouterProvider) {
