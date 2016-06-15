@@ -140,10 +140,12 @@
         }, 1000)
 
         player.playVideo();
+        return player;
 
       }
       console.log("Player is " + player)
 
+      // NOTE:
 
       // .getCurrentTime() --> state changes
 
@@ -153,18 +155,18 @@
         //   console.log("intro state");
         //   $state.go('intro');
         // }
-        if(player.getCurrentTime() >= 126) {
-          console.log("chapter 1 state")
-          $state.go('chapter1');
-        }
-        else if(player.getCurrentTime() >= 331) {
-          console.log("chapter 2 state")
-          $state.go('chapter2');
-        }
-        else if(player.getCurrentTime() >= 756) {
-          console.log("chapter 3 state")
-          $state.go('chapter3');
-        }
+        // if(player.getCurrentTime() >= 126) {
+        //   console.log("chapter 1 state")
+        //   $state.go('chapter1');
+        // }
+        // else if(player.getCurrentTime() >= 331) {
+        //   console.log("chapter 2 state")
+        //   $state.go('chapter2');
+        // }
+        // else if(player.getCurrentTime() >= 756) {
+        //   console.log("chapter 3 state")
+        //   $state.go('chapter3');
+        // }
 
       //player.seekTo(sec) functions for each ui route tag.
 
